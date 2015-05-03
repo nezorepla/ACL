@@ -9,7 +9,6 @@ using System.Text;
 using System.Data;
 
 using System.Text.RegularExpressions;
-using System.IO;
 
 
 
@@ -18,7 +17,7 @@ namespace ACL
 
     public class Output
     {
-        public static string hash() { return  DateTime.Now.Ticks.ToString().Substring(5); }
+
         /// <summary>
 
         /// Executes a command object. Use SQLException to check any error occured during execution.
@@ -40,11 +39,11 @@ namespace ACL
                     sb.AppendFormat("<th>{0}</th>", c.ColumnName);
                 }
                 sb.AppendLine("</tr></thead><tbody>");
-                //foreach (DataColumn c in dt.Columns)
-                //{
-                //    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
-                //}
-                //sb.AppendLine("</tr></thead><tbody>");
+                foreach (DataColumn c in dt.Columns)
+                {
+                    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
+                }
+                sb.AppendLine("</tr></thead><tbody>");
                 foreach (DataRow dr in dt.Rows)
                 {
                     sb.Append("<tr>"); foreach (object o in dr.ItemArray)
@@ -81,11 +80,11 @@ namespace ACL
                     sb.AppendFormat("<th>{0}</th>", c.ColumnName);
                 }
                 sb.AppendLine("</tr></thead><tbody>");
-                //foreach (DataColumn c in dt.Columns)
-                //{
-                //    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
-                //}
-                //sb.AppendLine("</tr></thead><tbody>");
+                foreach (DataColumn c in dt.Columns)
+                {
+                    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
+                }
+                sb.AppendLine("</tr></thead><tbody>");
                 foreach (DataRow dr in dt.Rows)
                 {
                     sb.Append("<tr>"); foreach (object o in dr.ItemArray)
@@ -706,7 +705,6 @@ namespace ACL
 
 
 
- 
 
 
     }

@@ -1,5 +1,0 @@
-C:\ACL\ACL\bin\Debug\ACL.dll
-C:\ACL\ACL\bin\Debug\ACL.pdb
-C:\ACL\ACL\obj\Debug\ACL.dll
-C:\ACL\ACL\obj\Debug\ACL.pdb
-C:\ACL\ACL\obj\Debug\ACL.csprojResolveAssemblyReference.cache

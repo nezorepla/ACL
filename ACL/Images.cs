@@ -28,7 +28,7 @@ namespace ACL
 
         public Bitmap SetGrayscale(System.Drawing.Image original)
         {
-             
+
             Bitmap temp = (Bitmap)original;
             Bitmap bmap = (Bitmap)temp.Clone();
             Color c;
