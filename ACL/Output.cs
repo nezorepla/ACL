@@ -39,11 +39,7 @@ namespace ACL
                     sb.AppendFormat("<th>{0}</th>", c.ColumnName);
                 }
                 sb.AppendLine("</tr></thead><tbody>");
-                foreach (DataColumn c in dt.Columns)
-                {
-                    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
-                }
-                sb.AppendLine("</tr></thead><tbody>");
+             
                 foreach (DataRow dr in dt.Rows)
                 {
                     sb.Append("<tr>"); foreach (object o in dr.ItemArray)
@@ -80,11 +76,7 @@ namespace ACL
                     sb.AppendFormat("<th>{0}</th>", c.ColumnName);
                 }
                 sb.AppendLine("</tr></thead><tbody>");
-                foreach (DataColumn c in dt.Columns)
-                {
-                    sb.AppendFormat("<th  scope=\"col\">{0}</th>", c.ColumnName);
-                }
-                sb.AppendLine("</tr></thead><tbody>");
+           
                 foreach (DataRow dr in dt.Rows)
                 {
                     sb.Append("<tr>"); foreach (object o in dr.ItemArray)
