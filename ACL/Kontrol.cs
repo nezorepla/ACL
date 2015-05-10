@@ -9,11 +9,8 @@ namespace ACL
     public class Kontrol
     {
 
-        /// <summary>
-        /// Özet: deneme
-        /// </summary>
-        /// <returns>return val</returns>
-        ///
+      
+
         public static Boolean IsNumeric(String s)
         {
             float f;
@@ -21,17 +18,21 @@ namespace ACL
             return float.TryParse(s, NumberStyles.Any, CultureInfo.InvariantCulture, out f);
             //float.TryParse(s, out output);
         }
-        /// <summary>
-        /// Özet: dedsneme
-        /// </summary>
-        /// <returns>resdsturn val</returns>
-        ///
+  
 
 
 
 
+      public static Boolean IsNull(String t)
+        {
+            bool rv;
 
+            if (t == null)
+            { rv = true; }
+            else { rv = false; }
 
+            return rv;
+        }
         public static string MimeType(string Extension)
         {
             string mime = "application/octetstream";
@@ -45,16 +46,7 @@ namespace ACL
         }
 
 
-        public static Boolean IsNull(String t)
-        {
-            bool rv;
-
-            if (t == null)
-            { rv = true; }
-            else { rv = false; }
-
-            return rv;
-        }
+  
 
 
         public static string KillAllDBConn()
